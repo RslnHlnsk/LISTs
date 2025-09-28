@@ -33,15 +33,16 @@ public class LinkedStack {
         if (tail == null) {
             return "EMPTY";
         }
-        StringBuilder sb = new StringBuilder();
+        String result = "";
         Node current = tail;
         while (current != null) {
-            sb.append(current.getValue());
+            result += current.getValue();
             current = current.getPrev();
             if (current != null) {
-                sb.append(" -> ");
+                result += " -> ";
             }
         }
-        return sb.toString();
+        return result;
     }
+
 }
